@@ -1,0 +1,16 @@
+[project]
+name = "mcp-sse"
+version = "0.1.0"
+description = "SSE-based MCP Server and Client"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.45.1",
+    "argparse>=1.4.0",
+    "elasticsearch>=8.17.2",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.2.1",
+    "openai>=1.66.3",
+    "python-dotenv>=1.0.1",
+    "ruff>=0.10.0",
+]
