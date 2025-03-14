@@ -6,7 +6,6 @@ This demonstrates a working pattern for SSE-based MCP servers and standalone MCP
 
 ## Usage
 
-**Note**: Make sure to supply `ANTHROPIC_API_KEY` in `.env` or as an environment variable.
 
 ```
 uv run weather.py
