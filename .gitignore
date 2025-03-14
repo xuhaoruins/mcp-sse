@@ -16,9 +16,6 @@ smithery.yaml
 # Environment variables
 .env
 
-# Docker files
-Dockerfile
-
 # Logs
 *.log
 
