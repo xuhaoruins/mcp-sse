@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 8080
 
 # Default command to run the server
-CMD ["uv", "run", "weather.py"]
+CMD ["uv", "run", "haxumcp.py"]
