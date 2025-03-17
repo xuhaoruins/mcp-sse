@@ -207,6 +207,23 @@ def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlett
         ],
     )
 
+@mcp.tool()
+async def count_chinese_characters(text: str) -> str:
+    """Count the number of Chinese characters in a string. Use when the user asks about the word count.
+    
+    Args:
+        text: The input text string containing Chinese characters
+    """
+    url = "https://haxufunctions.azurewebsites.net/api/http_trigger"
+    params = {'text': text}
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            response = await client.get(url, params=params, timeout=10.0)
+            response.raise_for_status()
+            return f"Chinese character count: {response.text}"
+        except Exception as e:
+            return f"Error counting Chinese characters: {str(e)}"
 
 if __name__ == "__main__":
     mcp_server = mcp._mcp_server  # noqa: WPS437
