@@ -64,3 +64,5 @@ By default, client connects to SSE endpoint provided in the command line argumen
 ```
 uv run client.py http://0.0.0.0:8080/sse
 ```
+
+sample for mcp sse
